@@ -1,8 +1,3 @@
-resource "aws_key_pair" "default" {
-  key_name   = "${var.identity}-key"
-  public_key = "${file("${var.public_key_path}")}"
-}
-
 resource "aws_security_group" "default" {
   name_prefix = "${var.identity}"
 
