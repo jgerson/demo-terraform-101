@@ -48,11 +48,6 @@ resource "aws_instance" "web" {
     "Created-by" = "Terraform"
   }
 
-  connection {
-    user        = "ubuntu"
-    private_key = "${file("${var.private_key_path}")}"
-  }
-
   provisioner "file" {
     source      = "assets"
     destination = "/tmp/"
